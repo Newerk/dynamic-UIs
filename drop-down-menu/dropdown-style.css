@@ -84,20 +84,26 @@ h6 {
   width: 12rem;
   height: min-content;
   margin: 0;
+  cursor: pointer;
+
+
 }
 
 /*--------------------------------------------------------*/
 
-.main, [id^='choice'] {
+.main {
   height: 3rem;
   /* width: 6rem; */
   border: 3px solid gray;
-  cursor: pointer;
-
 }
 
 [id^='choice'] {
+  border: 3px solid gray;
   border-top: 0;
+  height: 0;
+  font-size: 0;
+  transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 }
 
 ul {
@@ -105,11 +111,11 @@ ul {
   padding: 0;
   margin: 0;
 
+
 }
 
 .options {
   visibility: hidden;
-  height: min-content;
-  /* width: 6rem; */
+  /* height: 0; */
 
 }
