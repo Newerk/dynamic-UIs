@@ -21,6 +21,7 @@ main.addEventListener('click', () => {
 
 function textController(element, visibilityValue) {
     element.forEach(el => {
+
         if (visibilityValue.style.visibility === 'visible') {
             el.setAttribute('style', 'height: 3rem; font-size: 1rem')
         } else {
@@ -28,17 +29,12 @@ function textController(element, visibilityValue) {
         }
 
         el.addEventListener('click', function (e) {
-            const clickedOption = e.currentTarget.textContent;
-            el.textContent = currentDropDownText;
-            currentDropDownText = main.textContent = clickedOption;
-
-
-            element.forEach(node => {
-                node.setAttribute('style', 'visibility: hidden;');
-
-            })
+            let clickedOption = e.currentTarget.textContent;
+            main.textContent = currentDropDownText = el.textContent;
             visibilityValue.style.visibility = 'hidden';
+            element.forEach(node => node.setAttribute('style', 'height: 0; font-size: 0'))
         });
+
     })
 
 }
