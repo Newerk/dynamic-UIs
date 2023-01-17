@@ -98,17 +98,22 @@ h6 {
   justify-content: center;
 }
 
+
 [id^='choice'] {
   border: 3px solid gray;
   border-top: 0;
   height: 0;
   font-size: 0;
-  transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  visibility: hidden;
+
+
+  transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 }
+
 
 ul {
   list-style: none;
@@ -116,6 +121,6 @@ ul {
   margin: 0;
 }
 
-.options {
+/* .options {
   visibility: hidden;
-}
+} */
