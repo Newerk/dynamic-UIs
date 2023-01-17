@@ -139,8 +139,6 @@ h6 {
   flex-direction: column;
   height: min-content;
   width: min-content;
-  border: 1px solid black;
-  border-top: none;
 }
 
 #account, #settings {

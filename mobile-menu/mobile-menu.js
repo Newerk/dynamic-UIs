@@ -5,7 +5,7 @@ const extra = document.getElementById('extra');
 
 more.addEventListener('click', function () {
 if (extra.style.visibility !== 'visible') {
-    extra.setAttribute('style', 'visibility: visible');
+    extra.setAttribute('style', 'visibility: visible; border: 1px solid black; border-top: none;');
     document.getElementById('account').setAttribute('style', 'visibility: visible');
     document.getElementById('settings').setAttribute('style', 'visibility: visible');
 
