@@ -1,67 +1,159 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /*
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-
+#root,
+#__next {
+  isolation: isolate;
+}
 
 
 .mobile-display {
-    background-color: white;
-    width: 25rem;
-    height: 45rem;
+  background-color: white;
+  width: 25rem;
+  height: 45rem;
 
+  display: grid;
+  grid-template-rows: auto 1fr;
 
 }
+
+.nav-bar {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #2f4f4f;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  color: white;
+  font-size: small;
+}
+
+.nav-btn {
+  text-align: center;
+  line-height: 4rem;
+
+  border-right: .5px solid black;
+  border-left: .5px solid black;
+
+  padding: 0;
+  margin: 0;
+}
+
+.nav-btn:hover {
+  background-color: #243c3c;
+}
+
+#home {
+  border-left: none;
+}
+
+#more {
+  border-right: none;
+}
+
+.content {
+  display: flex;
+  justify-content: end;
+}
+
+
+#extra {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  width: min-content;
+  border: 1px solid black;
+  border-top: none;
+}
+
+#account, #settings {
+  height: 2rem;
+  width: 8rem;
+  font-size: small;
+  text-align: end;
+  line-height: 2rem;
+  padding-right: .5rem;
+  visibility: hidden;
+}
+
+#account {
+  border-bottom: 1px solid black;
+}
+

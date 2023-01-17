@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,25 @@
     <title>Mobile Menu</title>
     <link rel="stylesheet" href="mobile-menu.css">
 </head>
+
 <body>
     <script src="mobile-menu.js" defer></script>
-    
-    <div class="mobile-display"></div>
+
+    <div class="mobile-display">
+        <div class="nav-bar">
+            <div class="nav-btn" id="home">Home</div>
+            <div class="nav-btn" id="downloads">Downloads</div>
+            <div class="nav-btn" id="store">Store</div>
+            <div class="nav-btn" id="support">Support</div>
+            <div class="nav-btn" id="more">More</div>
+        </div>
+        <div class="content">
+            <div id="extra" visibility="hidden">
+                <div id="account">Account</div>
+                <div id="settings">Settings</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
