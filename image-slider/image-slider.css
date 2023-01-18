@@ -110,10 +110,13 @@ h6 {
 [id^='img'] {
   height: 90vh;
   width: 80vw;
+
+  margin: 0 2vw 0 2vw;
 }
 
 #img1 {
   background-color: red;
+  margin-left: 9vw;
 }
 
 #img2 {
@@ -133,6 +136,7 @@ h6 {
 
 #img5 {
   background-color: purple;
+  margin-right: 9vw;
 
 }
 
