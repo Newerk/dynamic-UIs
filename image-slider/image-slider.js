@@ -2,6 +2,7 @@ const scrollWrapper = document.querySelectorAll('.scroll-wrapper > *');
 const dotsContainer = document.querySelector('.dots-container');
 const leftBtn = document.getElementById('left');
 const rightBtn = document.getElementById('right');
+const firstImage = document.getElementById('img1');
 
 let start = 10;
 
@@ -15,39 +16,58 @@ const buildDots = ((node) => {
     }
 
     dotIndicator()
+    // setTimeout(goRight, 5000);
+
+    function start() {
+
+        setTimeout(function() {
+            console.log('Hello My Infinite Loop Execution');
+    
+            goRight()
+          // Again
+          start();
+    
+          // Every 3 sec
+        }, 5000);
+    }
+    
+    // Begins
+    start();
+    
+
+
 })(scrollWrapper);
+
 
 document.querySelectorAll('.dot').forEach(el => {
     el.addEventListener('click', function (e) {
         switch (e.target.id) {
             case 'pg1':
-                document.getElementById('img1').style.marginLeft = `10vw`;
+                firstImage.style.marginLeft = `10vw`;
                 start = 10;
 
                 break;
 
             case 'pg2':
-                document.getElementById('img1').style.marginLeft = `-74vw`;
+                firstImage.style.marginLeft = `-74vw`;
                 start = -74;
 
                 break;
 
             case 'pg3':
-                document.getElementById('img1').style.marginLeft = `-158vw`;
+                firstImage.style.marginLeft = `-158vw`;
                 start = -158;
-
 
                 break;
 
             case 'pg4':
-                document.getElementById('img1').style.marginLeft = `-242vw`;
+                firstImage.style.marginLeft = `-242vw`;
                 start = -242;
-
 
                 break;
 
             case 'pg5':
-                document.getElementById('img1').style.marginLeft = `-326vw`;
+                firstImage.style.marginLeft = `-326vw`;
                 start = -326;
 
                 break;
@@ -77,7 +97,6 @@ function goLeft() {
         start += 84;
     }
     dotIndicator()
-    console.log(start)
 
 }
 
@@ -93,7 +112,6 @@ function goRight() {
         start -= 84;
     }
     dotIndicator()
-    console.log(start)
 
 }
 
@@ -112,25 +130,25 @@ function dotIndicator() {
         case -74:
             document.getElementById('pg2').setAttribute('style', 'height: 3vh; width: 3vh;');
 
-            
+
             break;
 
         case -158:
             document.getElementById('pg3').setAttribute('style', 'height: 3vh; width: 3vh;');
 
-            
+
             break;
 
         case -242:
             document.getElementById('pg4').setAttribute('style', 'height: 3vh; width: 3vh;');
 
-            
+
             break;
 
         case -326:
             document.getElementById('pg5').setAttribute('style', 'height: 3vh; width: 3vh;');
 
-            
+
             break;
     }
 
