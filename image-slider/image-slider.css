@@ -163,6 +163,7 @@ h6 {
   border-radius: 50%;
 
   transition: 300ms;
+  cursor: pointer;
 }
 
 .next-prev-btns {

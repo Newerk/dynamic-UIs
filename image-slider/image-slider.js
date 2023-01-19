@@ -17,8 +17,54 @@ const buildDots = ((node) => {
     dotIndicator()
 })(scrollWrapper);
 
+document.querySelectorAll('.dot').forEach(el => {
+    el.addEventListener('click', function (e) {
+        switch (e.target.id) {
+            case 'pg1':
+                document.getElementById('img1').style.marginLeft = `10vw`;
+                start = 10;
+
+                break;
+
+            case 'pg2':
+                document.getElementById('img1').style.marginLeft = `-74vw`;
+                start = -74;
+
+                break;
+
+            case 'pg3':
+                document.getElementById('img1').style.marginLeft = `-158vw`;
+                start = -158;
+
+
+                break;
+
+            case 'pg4':
+                document.getElementById('img1').style.marginLeft = `-242vw`;
+                start = -242;
+
+
+                break;
+
+            case 'pg5':
+                document.getElementById('img1').style.marginLeft = `-326vw`;
+                start = -326;
+
+                break;
+        }
+        
+        dotIndicator()
+
+    })
+})
+
+
 leftBtn.addEventListener('click', goLeft)
 rightBtn.addEventListener('click', goRight)
+
+function grabImage() {
+
+}
 
 function goLeft() {
     if (start === 10) {
@@ -47,12 +93,14 @@ function goRight() {
         start -= 84;
     }
     dotIndicator()
+    console.log(start)
+
 }
 
 function dotIndicator() {
 
     document.querySelector('.dots-container').childNodes.forEach(el => {
-       el.setAttribute('style', 'height: 1vh; width: 1vh;')
+        el.setAttribute('style', 'height: 1vh; width: 1vh;')
     }
     )
 
