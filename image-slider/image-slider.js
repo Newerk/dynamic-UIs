@@ -52,7 +52,7 @@ document.querySelectorAll('.dot').forEach(el => {
 
                 break;
         }
-        
+
         dotIndicator()
 
     })
@@ -100,34 +100,39 @@ function goRight() {
 function dotIndicator() {
 
     document.querySelector('.dots-container').childNodes.forEach(el => {
-        el.setAttribute('style', 'height: 1vh; width: 1vh;')
+        el.setAttribute('style', 'height: 1.5vh; width: 1.5vh;')
     }
     )
 
     switch (start) {
         case 10:
-            document.getElementById('pg1').setAttribute('style', 'height: 2vh; width: 2vh;')
+            document.getElementById('pg1').setAttribute('style', 'height: 3vh; width: 3vh;');
 
             break;
         case -74:
-            document.getElementById('pg2').setAttribute('style', 'height: 2vh; width: 2vh;')
+            document.getElementById('pg2').setAttribute('style', 'height: 3vh; width: 3vh;');
 
+            
             break;
 
         case -158:
-            document.getElementById('pg3').setAttribute('style', 'height: 2vh; width: 2vh;')
+            document.getElementById('pg3').setAttribute('style', 'height: 3vh; width: 3vh;');
 
+            
             break;
 
         case -242:
-            document.getElementById('pg4').setAttribute('style', 'height: 2vh; width: 2vh;')
+            document.getElementById('pg4').setAttribute('style', 'height: 3vh; width: 3vh;');
 
+            
             break;
 
         case -326:
-            document.getElementById('pg5').setAttribute('style', 'height: 2vh; width: 2vh;')
+            document.getElementById('pg5').setAttribute('style', 'height: 3vh; width: 3vh;');
 
+            
             break;
     }
 
 }
+
