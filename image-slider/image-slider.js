@@ -20,19 +20,37 @@ rightBtn.addEventListener('click', goRight)
 
 
 function goLeft() {
-    if (start < 0) {
+    if (start === 10) {
+        document.getElementById('img1').style.marginLeft = `-326vw`;
+        start = -410;
+    }
+
+    if (start < 10) {
         document.getElementById('img1').style.marginLeft = `${start + 84}vw`;
 
         start += 84;
 
     }
+
+    console.log(start)
+
+
 }
 
 function goRight() {
+    if (start === -326) {
+        document.getElementById('img1').style.marginLeft = `10vw`;
+        start = 94;
+    }
+
+
     if (start > -326) {
         document.getElementById('img1').style.marginLeft = `${start - 84}vw`;
 
         start -= 84;
     }
+
+    console.log(start)
+
 }
 
