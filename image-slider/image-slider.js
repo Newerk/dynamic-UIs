@@ -16,25 +16,15 @@ const buildDots = ((node) => {
     }
 
     dotIndicator()
-    // setTimeout(goRight, 5000);
 
     function start() {
-
-        setTimeout(function() {
-            console.log('Hello My Infinite Loop Execution');
-    
+        setTimeout(function () {
             goRight()
-          // Again
-          start();
-    
-          // Every 3 sec
+            start();
+
         }, 5000);
     }
-    
-    // Begins
     start();
-    
-
 
 })(scrollWrapper);
 
@@ -116,6 +106,10 @@ function goRight() {
 }
 
 function dotIndicator() {
+    const changeDotSize = (id) => {
+        document.getElementById(id).setAttribute('style', 'height: 3vh; width: 3vh;');
+
+    }
 
     document.querySelector('.dots-container').childNodes.forEach(el => {
         el.setAttribute('style', 'height: 1.5vh; width: 1.5vh;')
@@ -124,31 +118,22 @@ function dotIndicator() {
 
     switch (start) {
         case 10:
-            document.getElementById('pg1').setAttribute('style', 'height: 3vh; width: 3vh;');
-
+            changeDotSize('pg1')
             break;
         case -74:
-            document.getElementById('pg2').setAttribute('style', 'height: 3vh; width: 3vh;');
-
-
+            changeDotSize('pg2')
             break;
 
         case -158:
-            document.getElementById('pg3').setAttribute('style', 'height: 3vh; width: 3vh;');
-
-
+            changeDotSize('pg3')
             break;
 
         case -242:
-            document.getElementById('pg4').setAttribute('style', 'height: 3vh; width: 3vh;');
-
-
+            changeDotSize('pg4')
             break;
 
         case -326:
-            document.getElementById('pg5').setAttribute('style', 'height: 3vh; width: 3vh;');
-
-
+            changeDotSize('pg5')
             break;
     }
 
