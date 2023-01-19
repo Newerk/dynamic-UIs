@@ -82,22 +82,26 @@ h6 {
   width: 100vw;
   display: grid;
   grid-template-rows: auto 1fr;
+  background-color: gray;
+  overflow: hidden;
+
 }
 
 .image-slider {
   display: flex;
   height: 95vh;
   width: 100%;
-  background-color: gray;
 
   align-items: center;
-
 }
 
 .nav-dots {
   background-color: black;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll-wrapper {
@@ -105,6 +109,8 @@ h6 {
   overflow: scroll;
   height: min-content;
   width: min-content;
+  position: relative;
+
 }
 
 [id^='img'] {
@@ -116,7 +122,8 @@ h6 {
 
 #img1 {
   background-color: red;
-  margin-left: 9vw;
+  margin-left: 10vw;
+  transition: 300ms;
 }
 
 #img2 {
@@ -136,7 +143,52 @@ h6 {
 
 #img5 {
   background-color: purple;
-  margin-right: 9vw;
 
 }
 
+.dots-container {
+  display: flex;
+  height: 100%;
+  width: auto;
+
+  align-items: center;
+  gap: 2rem;
+}
+
+.dot {
+  height: 1vh;
+  width: 1vh;
+
+  background-color: white;
+  border-radius: 50%;
+}
+
+.next-prev-btns {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100vw;
+  margin: 0;
+  padding: 0 .5rem 0 .5rem;
+}
+
+button {
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
+  border: none;
+}
+
+#left {
+background-image: url(./assets/left.svg);
+}
+
+#right {
+background-image: url(./assets/right.svg);
+}
+
+#left, #right {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
